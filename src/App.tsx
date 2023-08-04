@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import { editableInputTypes } from "@testing-library/user-event/dist/utils";
+import { Layout } from "./components/Layout/Layout";
 
-function App() {
+const HomePage = lazy(() => import("./pages/homePage/homePage"));
+const DepartmentsPage = lazy(
+  () => import("./pages/departmentsPage/departmentsPage")
+);
+const NotFoundPage = lazy(
+  () => import("./components/NotFoundPage/NotFoundPage")
+);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="departments" element={<DepartmentsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;
