@@ -1,14 +1,14 @@
 import { useEffect, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import { editableInputTypes } from "@testing-library/user-event/dist/utils";
+// import { editableInputTypes } from "@testing-library/user-event/dist/utils";
 import { Layout } from "./components/Layout/Layout";
 
 const HomePage = lazy(() => import("./pages/homePage/homePage"));
-const DepartmentsPage = lazy(
-  () => import("./pages/departmentsPage/departmentsPage")
+const DepartmentsPage = lazy(() =>
+  import("./pages/departmentsPage/departmentsPage")
 );
-const NotFoundPage = lazy(
-  () => import("./components/NotFoundPage/NotFoundPage")
+const NotFoundPage = lazy(() =>
+  import("./components/NotFoundPage/NotFoundPage")
 );
 
 const App = () => {

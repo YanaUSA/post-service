@@ -1,5 +1,7 @@
 import Navigation from "../Navigation/Navigation";
 
+import styles from "./Header.module.css";
+
 const Header = () => {
   return (
     <>

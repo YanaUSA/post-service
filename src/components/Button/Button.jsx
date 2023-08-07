@@ -1,14 +1,15 @@
-interface ButtonProps {
-  className?: string;
-  variant?: string;
-  type: "button" | "submit" | "reset";
-  text?: string;
-  isDisabled?: boolean;
-  onClick?: () => void;
-  children?: React.ReactNode;
-}
+// interface ButtonProps {
+//   className?: string;
+//   variant?: string;
+//   type: "button" | "submit" | "reset";
+//   text?: string;
+//   isDisabled?: boolean;
+//   onClick?: () => void;
+//   children?: React.ReactNode;
+// }
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
+  // const Button: React.FC<ButtonProps> = ({
   className,
   variant,
   type,

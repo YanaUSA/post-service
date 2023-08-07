@@ -3,7 +3,7 @@ import DepartmentsList from "../../components/DepartmentsList/DepartmentsList";
 const departmentsPage = () => {
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1>Список відділень</h1>
       <DepartmentsList />
     </div>
   );

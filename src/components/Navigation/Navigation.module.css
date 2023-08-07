@@ -1,0 +1,26 @@
+.navContainer {
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLink {
+  background-color: pink;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navLink:active {
+  background-color: black;
+}
+
+.navLink:hover {
+  background-color: #555;
+}
+
+.navLink:not(:last-child) {
+  margin-right: 10px;
+}
